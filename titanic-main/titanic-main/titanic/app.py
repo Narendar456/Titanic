@@ -21,8 +21,9 @@ def result():
     X = np.array([ticket_class,gender,age,siblings,parents,fair,onboard]).reshape(1,-1)
     print(X)
 
+    model_path = r'C:\Users\naren\Downloads\titanic-main\titanic-main\titanic\model\dtc1.sav'
 
-    model = pickle.load(open('model.pkl', 'rb'))
+    model = joblib.load(model_path)
     Y = model.predict(X)
     pred = "survived" if Y[0]==1 else "died"
 
