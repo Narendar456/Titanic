@@ -22,7 +22,7 @@ def result():
     print(X)
 
 
-    model=model.pkl
+    model = pickle.load(open('model.pkl', 'rb'))
     Y = model.predict(X)
     pred = "survived" if Y[0]==1 else "died"
 
