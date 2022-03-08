@@ -22,10 +22,7 @@ def result():
     print(X)
 
 
-    model_path =r'C:\Users\naren\Downloads\titanic-main\titanic-main\titanic\model\dtc1.sav'
-
-    model = joblib.load(model_path)
-
+    model=model.pkl
     Y = model.predict(X)
     pred = "survived" if Y[0]==1 else "died"
 
